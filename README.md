@@ -1,6 +1,6 @@
 # Antonita Racheal — Personal Website
 
-The source for [aracheal.github.io](https://aracheal.github.io) — a personal portfolio for Antonita Racheal, data analyst at the Metropolitan Transportation Authority.
+The source for [aracheal.github.io](https://aracheal.github.io) — My personal portfolio.
 
 ## Built with
 
