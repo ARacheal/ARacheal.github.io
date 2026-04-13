@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antonita Racheal — Data Analyst</title>
+  <meta name="description" content="Antonita Racheal — data analyst at the Metropolitan Transportation Authority. Building ridership pipelines, geospatial datasets, and the tools that keep New York moving." />
+  <meta name="author" content="Antonita Racheal" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Antonita Racheal — Data Analyst" />
+  <meta property="og:description" content="Data analyst at the MTA. I work where data meets the everyday: Transit, Cities, Public Life." />
+  <meta property="og:url" content="https://aracheal.github.io/" />
+  <meta property="og:image" content="https://aracheal.github.io/images/nyc%20map.jpg" />
+  <meta property="og:site_name" content="Antonita Racheal" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Antonita Racheal — Data Analyst" />
+  <meta name="twitter:description" content="Data analyst at the MTA. I work where data meets the everyday: Transit, Cities, Public Life." />
+  <meta name="twitter:image" content="https://aracheal.github.io/images/nyc%20map.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23c65d3a'/><text x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='36' font-weight='600' fill='%23faf7f2'>AR</text></svg>"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#home" class="nav-logo">AR.</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#writing">Featured</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <svg class="bridge" viewBox="0 0 1400 500" preserveAspectRatio="xMidYEnd meet" aria-hidden="true">
+      <!-- Water surface with ripples -->
+      <g class="br-water">
+        <line x1="0" y1="460" x2="1400" y2="460"/>
+        <line x1="40" y1="475" x2="160" y2="475"/>
+        <line x1="240" y1="475" x2="380" y2="475"/>
+        <line x1="470" y1="475" x2="600" y2="475"/>
+        <line x1="720" y1="475" x2="840" y2="475"/>
+        <line x1="930" y1="475" x2="1070" y2="475"/>
+        <line x1="1160" y1="475" x2="1320" y2="475"/>
+      </g>
+
+      <!-- Roadway / deck (double line) -->
+      <path class="br-deck" d="M0,390 L1400,390"/>
+      <path class="br-deck-edge" d="M0,400 L1400,400"/>
+      <path class="br-deck-edge" d="M0,408 L1400,408"/>
+
+      <!-- LEFT TOWER (Manhattan side) — Gothic masonry -->
+      <!-- Tower outline: base + narrowing + cornice -->
+      <path class="br-tower" d="M378,390 L378,150 L382,145 L382,120 L468,120 L468,145 L472,150 L472,390"/>
+      <!-- Cornice cap -->
+      <path class="br-tower" d="M378,150 L472,150"/>
+      <path class="br-tower" d="M382,120 L468,120 L465,108 L385,108 Z"/>
+      <!-- Pointed pyramid top -->
+      <path class="br-tower" d="M385,108 L425,68 L465,108"/>
+
+      <!-- Gothic double pointed arches -->
+      <path class="br-arch" d="M393,390 L393,305 L405,268 L417,305 L417,390 Z"/>
+      <path class="br-arch" d="M433,390 L433,305 L445,268 L457,305 L457,390 Z"/>
+      <!-- Arch keystone dots -->
+      <circle class="br-detail" cx="405" cy="305" r="1.2"/>
+      <circle class="br-detail" cx="445" cy="305" r="1.2"/>
+
+      <!-- Horizontal masonry banding -->
+      <line class="br-band" x1="378" y1="245" x2="472" y2="245"/>
+      <line class="br-band" x1="378" y1="210" x2="472" y2="210"/>
+      <line class="br-band" x1="378" y1="180" x2="472" y2="180"/>
+      <!-- Subtle stone block marks -->
+      <line class="br-band" x1="425" y1="245" x2="425" y2="180"/>
+
+      <!-- RIGHT TOWER (Brooklyn side) — identical -->
+      <path class="br-tower" d="M928,390 L928,150 L932,145 L932,120 L1018,120 L1018,145 L1022,150 L1022,390"/>
+      <path class="br-tower" d="M928,150 L1022,150"/>
+      <path class="br-tower" d="M932,120 L1018,120 L1015,108 L935,108 Z"/>
+      <path class="br-tower" d="M935,108 L975,68 L1015,108"/>
+
+      <path class="br-arch" d="M943,390 L943,305 L955,268 L967,305 L967,390 Z"/>
+      <path class="br-arch" d="M983,390 L983,305 L995,268 L1007,305 L1007,390 Z"/>
+      <circle class="br-detail" cx="955" cy="305" r="1.2"/>
+      <circle class="br-detail" cx="995" cy="305" r="1.2"/>
+
+      <line class="br-band" x1="928" y1="245" x2="1022" y2="245"/>
+      <line class="br-band" x1="928" y1="210" x2="1022" y2="210"/>
+      <line class="br-band" x1="928" y1="180" x2="1022" y2="180"/>
+      <line class="br-band" x1="975" y1="245" x2="975" y2="180"/>
+
+      <!-- MAIN SUSPENSION CABLES — drape over tower tip (y=68) -->
+      <path class="br-cable" d="M0,378 Q210,64 425,64 Q700,378 975,64 Q1190,64 1400,378"/>
+      <path class="br-cable" d="M0,382 Q210,68 425,68 Q700,382 975,68 Q1190,68 1400,382"/>
+      <path class="br-cable" d="M0,386 Q210,72 425,72 Q700,386 975,72 Q1190,72 1400,386"/>
+      <path class="br-cable" d="M0,390 Q210,76 425,76 Q700,390 975,76 Q1190,76 1400,390"/>
+
+      <!-- DIAGONAL STAY CABLES — famous fan/web pattern -->
+      <g class="br-stays">
+        <!-- Left tower radiating -->
+        <line x1="425" y1="68" x2="100" y2="390"/>
+        <line x1="425" y1="68" x2="160" y2="390"/>
+        <line x1="425" y1="68" x2="220" y2="390"/>
+        <line x1="425" y1="68" x2="280" y2="390"/>
+        <line x1="425" y1="68" x2="340" y2="390"/>
+        <line x1="425" y1="68" x2="510" y2="390"/>
+        <line x1="425" y1="68" x2="570" y2="390"/>
+        <line x1="425" y1="68" x2="630" y2="390"/>
+        <line x1="425" y1="68" x2="690" y2="390"/>
+        <line x1="425" y1="68" x2="750" y2="390"/>
+        <!-- Right tower radiating -->
+        <line x1="975" y1="68" x2="650" y2="390"/>
+        <line x1="975" y1="68" x2="710" y2="390"/>
+        <line x1="975" y1="68" x2="770" y2="390"/>
+        <line x1="975" y1="68" x2="830" y2="390"/>
+        <line x1="975" y1="68" x2="890" y2="390"/>
+        <line x1="975" y1="68" x2="1060" y2="390"/>
+        <line x1="975" y1="68" x2="1120" y2="390"/>
+        <line x1="975" y1="68" x2="1180" y2="390"/>
+        <line x1="975" y1="68" x2="1240" y2="390"/>
+        <line x1="975" y1="68" x2="1300" y2="390"/>
+      </g>
+
+      <!-- VERTICAL SUSPENDERS (from main cable down to deck) -->
+      <g class="br-suspenders">
+        <line x1="40"  y1="390" x2="40"  y2="322"/>
+        <line x1="80"  y1="390" x2="80"  y2="271"/>
+        <line x1="120" y1="390" x2="120" y2="227"/>
+        <line x1="160" y1="390" x2="160" y2="187"/>
+        <line x1="200" y1="390" x2="200" y2="154"/>
+        <line x1="240" y1="390" x2="240" y2="125"/>
+        <line x1="280" y1="390" x2="280" y2="103"/>
+        <line x1="320" y1="390" x2="320" y2="86"/>
+        <line x1="360" y1="390" x2="360" y2="75"/>
+
+        <line x1="490" y1="390" x2="490" y2="133"/>
+        <line x1="530" y1="390" x2="530" y2="164"/>
+        <line x1="570" y1="390" x2="570" y2="188"/>
+        <line x1="610" y1="390" x2="610" y2="206"/>
+        <line x1="650" y1="390" x2="650" y2="218"/>
+        <line x1="700" y1="390" x2="700" y2="223"/>
+        <line x1="750" y1="390" x2="750" y2="218"/>
+        <line x1="790" y1="390" x2="790" y2="206"/>
+        <line x1="830" y1="390" x2="830" y2="188"/>
+        <line x1="870" y1="390" x2="870" y2="164"/>
+        <line x1="910" y1="390" x2="910" y2="133"/>
+
+        <line x1="1040" y1="390" x2="1040" y2="75"/>
+        <line x1="1080" y1="390" x2="1080" y2="86"/>
+        <line x1="1120" y1="390" x2="1120" y2="103"/>
+        <line x1="1160" y1="390" x2="1160" y2="126"/>
+        <line x1="1200" y1="390" x2="1200" y2="154"/>
+        <line x1="1240" y1="390" x2="1240" y2="188"/>
+        <line x1="1280" y1="390" x2="1280" y2="227"/>
+        <line x1="1320" y1="390" x2="1320" y2="271"/>
+        <line x1="1360" y1="390" x2="1360" y2="322"/>
+      </g>
+
+      <!-- Flagpoles atop towers -->
+      <line class="br-flagpole" x1="425" y1="68" x2="425" y2="45"/>
+      <line class="br-flagpole" x1="975" y1="68" x2="975" y2="45"/>
+      <!-- Tiny flags -->
+      <path class="br-flag" d="M425,48 L438,52 L425,56"/>
+      <path class="br-flag" d="M975,48 L988,52 L975,56"/>
+    </svg>
+
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="word">Hello!</span>
+        <span class="word">I'm</span>
+        <span class="word accent">Antonita Racheal.</span>
+      </h1>
+      <p class="hero-sub"><span class="nowrap-end">Data analyst at the Metropolitan Transportation Authority — I work where data meets the&nbsp;everyday.</span><br/>Transit, Cities, Public Life.</p>
+    </div>
+  </section>
+
+  <section id="about" class="section section-wide reveal">
+    <h2>About</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead">
+          I'm Antonita Racheal — a data analyst based in New York City. I spend my days with
+          operational data, service metrics, and ridership numbers, looking for the patterns
+          that help keep the city moving.        </p>
+
+        <h3>Experience</h3>
+        <ul class="timeline">
+          <li>
+            <span class="date">Jan 2023 – Present</span>
+            <div>
+              <strong>Transit Data Analyst — Metropolitan Transportation Authority</strong>
+              <span class="loc">New York City, NY</span>
+              <p>Build ridership pipelines, publish the MTA Data &amp; Analytics blog, and ship geospatial datasets — including Uber and Lyft data — powering NYC's congestion pricing launch and analysts across the agency.</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">Sep 2022 – Jan 2023</span>
+            <div>
+              <strong>Graduate Researcher — Accenture × Institute of Data Science, NJIT</strong>
+              <span class="loc">Newark, NJ</span>
+              <p>Researched software vulnerabilities and knowledge graph applications with Dr. David Bader's group, using CodeQL to surface security gaps in open-source packages.</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">Jun 2022 – Aug 2022</span>
+            <div>
+              <strong>Teaching Assistant — Educational Opportunity Program, NJIT</strong>
+              <span class="loc">Newark, NJ</span>
+              <p>Mentored 50+ pre-college students and led lectures in a Study Skills and Academic Success course.</p>
+            </div>
+          </li>
+        </ul>
+
+        <h3>Education</h3>
+        <ul class="timeline">
+          <li>
+            <span class="date">Sep 2021 – May 2023</span>
+            <div>
+              <strong>M.S. Computer and Information Science — NJIT</strong>
+              <span class="loc">Newark, NJ</span>
+              <p>Data Structures and Algorithms, Big Data, Cloud Computing, Data Analytics with R, Database Design, Software Testing.</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">Jul 2017 – May 2021</span>
+            <div>
+              <strong>B.Tech Bioinformatics — Karunya Institute of Technology</strong>
+              <span class="loc">Coimbatore, India</span>
+              <p>Machine Learning, Statistics, Python. Thesis: Computational Enrichment Analysis of SAP Protein on Metachromatic Leukodystrophy.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="photo-grid">
+        <div class="photo-tile photo-main"><img src="images/1.jpg" alt=""/></div>
+        <div class="photo-tile"><img src="images/2.jpg" alt=""/></div>
+        <div class="photo-tile"><img src="images/3.jpg" alt=""/></div>
+        <div class="photo-tile photo-main-2"><img src="images/4.jpg" alt=""/></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-wide reveal">
+    <h2>Projects</h2>
+    <p class="section-sub"><strong>Now:</strong> Working on AI workflows for the Power Control Center — building tools that support operational decision-making at the MTA.</p>
+    <div class="cards">
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7204089626607730689/" target="_blank" rel="noopener" class="card tilt" data-tags="GIS,Transit">
+        <span class="card-icon">🗽</span>
+        <h3>Congestion Pricing NYC</h3>
+        <p>Designed and drew the Central Business District geofence for NYC's congestion pricing launch.</p>
+        <div class="tags"><span>Mapbox</span><span>ArcGIS</span><span>Python</span><span>Transit</span></div>
+      </a>
+      <a href="https://github.com/ARacheal/News-Aggregator-Website-With-NewsAPI" target="_blank" rel="noopener" class="card tilt" data-tags="PHP,API">
+        <span class="card-icon">📰</span>
+        <h3>News Aggregator</h3>
+        <p>A full-stack news aggregator pulling live feeds from the NewsAPI.</p>
+        <div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>API</span></div>
+      </a>
+      <a href="https://github.com/ARacheal/Flight-Data-Analysis--Big-Data-CS644" target="_blank" rel="noopener" class="card tilt" data-tags="Java,Hadoop,Big Data">
+        <span class="card-icon">✈️</span>
+        <h3>Flight Data Analysis</h3>
+        <p>Mining patterns in flight data using Hadoop and big-data pipelines.</p>
+        <div class="tags"><span>Java</span><span>Hadoop</span><span>MapReduce</span><span>Big Data</span></div>
+      </a>
+      <a href="https://github.com/ARacheal/Wine-Quality-Prediction-PySpark-Cloud-Computing-CS677" target="_blank" rel="noopener" class="card tilt" data-tags="PySpark,ML,Cloud">
+        <span class="card-icon">🍷</span>
+        <h3>Wine Quality Prediction</h3>
+        <p>Distributed ML model to predict wine quality using PySpark on the cloud.</p>
+        <div class="tags"><span>PySpark</span><span>Python</span><span>AWS</span><span>ML</span></div>
+      </a>
+      <a href="https://github.com/ARacheal/ARacheal.github.io" target="_blank" rel="noopener" class="card tilt" data-tags="Web">
+        <span class="card-icon">👩‍💻</span>
+        <h3>Personal Website</h3>
+        <p>This very site — vibe coded from scratch.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span><span>Vibe Coding</span></div>
+      </a>
+      <a href="https://github.com/ARacheal/Computational-Enrichment-Analysis-of-SAP-Protein-on-Lysosomal-Storage-Disorder-Metachromatic-Leuko" target="_blank" rel="noopener" class="card tilt" data-tags="Bioinformatics,Research">
+        <span class="card-icon">🧬</span>
+        <h3>SAP Protein Enrichment Analysis</h3>
+        <p>Computational study of SAP protein in a lysosomal storage disorder.</p>
+        <div class="tags"><span>Python</span><span>R</span><span>Bioinformatics</span><span>Research</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="writing" class="section section-wide reveal">
+    <h2>Featured</h2>
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7204089626607730689/" target="_blank" rel="noopener" class="post-card">
+      <div class="post-card-img">
+        <img src="images/nyc map.jpg" alt="NYC congestion pricing map" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');"/>
+      </div>
+      <div class="post-card-body">
+        <span class="post-date">LinkedIn · 2025</span>
+        <h3>Congestion Pricing NYC — Behind the Map</h3>
+        <p>A shout-out for the Central Business District geofence I designed for the MTA's congestion pricing launch.</p>
+        <span class="read-more">Read on LinkedIn →</span>
+      </div>
+    </a>
+    <a href="https://www.mta.info/article/new-york-on-the-move" target="_blank" rel="noopener" class="post-card">
+      <div class="post-card-img">
+        <img src="images/mta-blog-1.png" alt="Chart from New York on the Move" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');"/>
+      </div>
+      <div class="post-card-body">
+        <span class="post-date">MTA · 2024</span>
+        <h3>New York on the Move</h3>
+        <p>A look at how New Yorkers are riding, where they're going, and what the data tells us about the city's recovery.</p>
+        <span class="read-more">Read on mta.info →</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="contact" class="section section-wide reveal contact">
+    <h2>Let's talk</h2>
+    <p class="lead">Open to collabs and matcha chats 🍵</p>
+    <ul class="contact-links">
+      <li>
+        <a href="mailto:antonita.racheal@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <span>Email</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/anracheal/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ARacheal" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          <span>GitHub</span>
+        </a>
+      </li>
+    </ul>
+    <p class="footer-note">Made in NYC, fueled by subway delays 🚇</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
